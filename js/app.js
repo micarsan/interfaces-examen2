@@ -76,6 +76,9 @@ window.addEventListener("load", () => {
                     if( element.properties.telefono.length > 0 ) {
                         modal_direction.querySelector('.modal-body .telefono a').innerText = element.properties.telefono;
                         modal_direction.querySelector('.modal-body .telefono a').setAttribute('href', 'tel:'+element.properties.telefono);
+                    } else {
+                        modal_direction.querySelector('.modal-body .telefono a').innerText = '';
+                        modal_direction.querySelector('.modal-body .telefono a').removeAttribute('href');
                     }
 
                     let myModal = new bootstrap.Modal('#modal-direction', {
